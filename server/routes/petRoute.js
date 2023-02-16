@@ -26,7 +26,7 @@ const upload = multer({
   fileFilter: function (req, file, cb) {
     var ext = path.extname(file.originalname);
 
-    if (ext !== ".png" && ext !== ".jpeg" && ext !== ".jpg") {
+    if (ext !== ".png" && ext !== ".jpeg" && ext !== ".jpg" && ext !== ".webp") {
       return cb(new Error("Only videos are allowed!"));
     }
 
